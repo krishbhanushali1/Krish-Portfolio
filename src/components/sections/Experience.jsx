@@ -86,24 +86,24 @@ export function Experience() {
 
                 {/* Optional Certificate Section */}
                 {exp.certificate && (
-                  <div className="mt-6 pt-5 border-t border-dark-200/60 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
+                  <div className="mt-6 pt-5 border-t border-dark-200/60 dark:border-white/10 flex flex-wrap items-center justify-between gap-3 relative z-20">
                     <div className="text-xs font-semibold text-dark-500 dark:text-dark-400 uppercase tracking-wider">
                       Internship Certificate
                     </div>
                     <div className="flex items-center gap-2">
                       <a
-                        href={exp.certificate}
+                        href={encodeURI(exp.certificate)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary-500/10 hover:bg-primary-500/20 text-primary-600 dark:text-primary-400 border border-primary-500/20 transition-all duration-200 hover:scale-105"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary-500/10 hover:bg-primary-500/25 text-primary-600 dark:text-primary-400 border border-primary-500/25 transition-all duration-200 hover:scale-105 cursor-pointer shadow-sm"
                       >
                         <FiEye className="w-3.5 h-3.5" />
                         View Certificate
                       </a>
                       <a
-                        href={exp.certificate}
+                        href={encodeURI(exp.certificate)}
                         download
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-dark-100 dark:bg-white/5 hover:bg-dark-200 dark:hover:bg-white/10 text-dark-700 dark:text-dark-300 border border-dark-200 dark:border-white/10 transition-all duration-200 hover:scale-105"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-dark-100 dark:bg-white/5 hover:bg-dark-200 dark:hover:bg-white/15 text-dark-700 dark:text-dark-300 border border-dark-200 dark:border-white/10 transition-all duration-200 hover:scale-105 cursor-pointer shadow-sm"
                       >
                         <FiDownload className="w-3.5 h-3.5" />
                         Download

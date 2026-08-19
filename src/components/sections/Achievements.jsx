@@ -47,10 +47,10 @@ export function Achievements() {
                 className="p-6 h-full flex flex-col justify-between items-start min-h-[220px] relative group"
               >
                 {/* Glowing border ring */}
-                <div className="absolute inset-0 border border-primary-500/0 group-hover:border-primary-500/10 rounded-2xl transition-colors duration-300" />
+                <div className="absolute inset-0 border border-primary-500/0 group-hover:border-primary-500/10 rounded-2xl transition-colors duration-300 pointer-events-none" />
 
                 {/* Top Section: Icon & Content */}
-                <div className="w-full">
+                <div className="w-full relative z-10">
                   {/* Icon Container */}
                   <div className="w-12 h-12 rounded-xl bg-dark-100 dark:bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     {getIcon(item.icon)}
@@ -69,22 +69,22 @@ export function Achievements() {
 
                 {/* Optional Certificate actions */}
                 {item.certificate && (
-                  <div className="w-full mt-4 pt-3 border-t border-dark-200/60 dark:border-white/10 flex items-center gap-2">
+                  <div className="w-full mt-4 pt-3 border-t border-dark-200/60 dark:border-white/10 flex items-center gap-2 relative z-20">
                     <a
-                      href={item.certificate}
+                      href={encodeURI(item.certificate)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold bg-primary-500/10 hover:bg-primary-500/20 text-primary-600 dark:text-primary-400 border border-primary-500/20 transition-all duration-200 hover:scale-105"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-primary-500/10 hover:bg-primary-500/25 text-primary-600 dark:text-primary-400 border border-primary-500/25 transition-all duration-200 hover:scale-105 cursor-pointer shadow-sm"
                     >
-                      <FiEye className="w-3 h-3" />
+                      <FiEye className="w-3.5 h-3.5" />
                       View
                     </a>
                     <a
-                      href={item.certificate}
+                      href={encodeURI(item.certificate)}
                       download
-                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold bg-dark-100 dark:bg-white/5 hover:bg-dark-200 dark:hover:bg-white/10 text-dark-700 dark:text-dark-300 border border-dark-200 dark:border-white/10 transition-all duration-200 hover:scale-105"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-dark-100 dark:bg-white/5 hover:bg-dark-200 dark:hover:bg-white/15 text-dark-700 dark:text-dark-300 border border-dark-200 dark:border-white/10 transition-all duration-200 hover:scale-105 cursor-pointer shadow-sm"
                     >
-                      <FiDownload className="w-3 h-3" />
+                      <FiDownload className="w-3.5 h-3.5" />
                       Download
                     </a>
                   </div>
