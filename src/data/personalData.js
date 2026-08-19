@@ -73,7 +73,7 @@ export const experience = [
       'Building interactive user interfaces',
       'Team collaboration & agile workflow',
     ],
-    certificate: '/certificates/web-dev-internship.pdf', // TODO: Put your certificate file in public/certificates/
+    certificate: '/certificates/Idiligence Internship.pdf',
   },
 ];
 
@@ -176,7 +176,7 @@ export const achievements = [
     description:
       'Successfully completed web development internship at iDiligence Solutions Pvt Ltd, building production modules.',
     icon: 'certificate',
-    certificate: '/certificates/web-dev-internship.pdf', // TODO: Put your certificate file in public/certificates/
+    certificate: '/certificates/Idiligence Internship.pdf',
   },
   {
     title: 'Digital Governance Fellow',
