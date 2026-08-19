@@ -12,12 +12,17 @@ import { fadeInUp, slideInLeft, slideInRight } from '../../animations/variants';
  */
 export function About() {
   const highlights = [
-    { title: 'Software Dev', value: 'Passionate coding' },
-    { title: 'Real-world projects', value: 'Focus on impact' },
-    { title: 'Web / Mobile', value: 'React & Flutter' },
-    { title: 'Hackathons', value: 'Ignite 7.0 Winner' },
-    { title: 'Cybersecurity', value: 'Keen interest' },
-    { title: 'Always Learning', value: 'Tackling complex issues' },
+    { title: 'Developer', value: 'Building practical solutions' },
+
+    { title: 'Full-Stack', value: 'MERN Stack' },
+
+    { title: 'Web & Mobile', value: 'React & Flutter' },
+
+    { title: 'Hackathon Winner', value: 'Ignite 7.0' },
+
+    { title: 'Cybersecurity', value: 'Learning & exploring' },
+
+    { title: 'Continuous Learner', value: 'Always building & improving' },
   ];
 
   return (
