@@ -37,20 +37,17 @@ export const sendEmail = async (formData) => {
     EMAIL_CONFIG.WEB3FORMS_ACCESS_KEY &&
     EMAIL_CONFIG.WEB3FORMS_ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY_HERE'
   ) {
+    const formPayload = new FormData();
+    formPayload.append('access_key', EMAIL_CONFIG.WEB3FORMS_ACCESS_KEY.trim());
+    formPayload.append('name', formData.name);
+    formPayload.append('email', formData.email);
+    formPayload.append('message', formData.message);
+    formPayload.append('subject', `New Portfolio Message from ${formData.name}`);
+    formPayload.append('from_name', formData.name);
+
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        access_key: EMAIL_CONFIG.WEB3FORMS_ACCESS_KEY,
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-        subject: `New Portfolio Message from ${formData.name}`,
-        from_name: formData.name,
-      }),
+      body: formPayload,
     });
 
     const data = await response.json();
