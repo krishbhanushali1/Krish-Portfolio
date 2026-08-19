@@ -39,7 +39,7 @@ export function Contact() {
       console.error(error);
       setStatus({
         type: 'error',
-        message: 'Something went wrong. Please try again or email directly.',
+        message: error.message || 'Something went wrong. Please try again or email directly.',
       });
     } finally {
       setLoading(false);
