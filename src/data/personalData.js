@@ -188,6 +188,12 @@ export const achievements = [
       'Graduated with distinction in Diploma in Computer Engineering from K J Somaiya Polytechnic.',
     icon: 'academic',
   },
+  {
+    title: 'SSC — 84.60%',
+    description:
+      'Completed Secondary School Certificate with 84.60% from Shri Mahavir Jain English School.',
+    icon: 'academic',
+  },
 ];
 
 // ─── Navigation Links ────────────────────────────────────────
